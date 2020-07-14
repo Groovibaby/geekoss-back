@@ -1,0 +1,412 @@
+/* OVERALL */
+
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700&display=swap');
+
+html {
+  background-color: #f7f8fc;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Muli', 'Comfortaa', Arial, Helvetica, sans-serif;
+  background-color: #f7f8fc !important;
+  --bg-nav: #64C7E6;
+}
+
+h3 {
+  font-size: 1rem !important;
+}
+
+p,
+h1,
+h2,
+h3,
+label,
+tr,
+th,
+td {
+  font-family: 'Muli', Arial, Helvetica, sans-serif;
+}
+
+/* LOGIN */
+
+.LoginBkg {
+  background-color: #64C7E6;
+  min-height: 100vh;
+  position: relative;
+}
+
+.LoginForm {
+  background: #fff;
+  border-radius: 10px;
+  width: 400px;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.LoginLabels {
+  color: #9fa2b4;
+}
+
+/* NAVBAR */
+
+.Nav-container {
+  position: absolute;
+  width: 255px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: var(--bg-nav);
+}
+
+.Nav-logo {
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.Img-logo {
+  width: 200px;
+  margin-top: 20px;
+}
+
+hr {
+  background-color: #555;
+  border: none;
+  height: 1px;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+  padding: 15px 0px 15px 50px;
+}
+
+.brand-interface {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:hover > .brand-interface {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:focus > .brand-interface {
+  background: #fff;
+  border-left: 3px solid #fff;
+  color: #000;
+}
+
+/* FAS ICONS */
+
+.fas {
+  margin-right: 20px;
+}
+
+.fas:focus {
+  outline: none;
+}
+
+a .fa-pen {
+  color: #000 !important;
+}
+
+a .fa-pen:hover {
+  color: #555 !important;
+}
+
+.fa-trash:hover {
+  color: #ff5733;
+}
+
+.fa-power-off:hover {
+  color: #ff5733;
+}
+
+/* HEADER */
+
+.Img-admin {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #dfe0eb;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Admin-name {
+  font-size: 1rem;
+  padding: 17px 10px 15px 0px;
+}
+
+.Admin-brand h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  padding: 12px 0px 12px 20px;
+}
+
+.Admin-board {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 35px !important;
+}
+
+.Admin-board .Disconnect {
+  cursor: pointer;
+}
+
+.Admin-board .Disconnect:focus {
+  outline: none;
+}
+
+.Admin-board .fas {
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.Header-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  left: 255px;
+  top: 0px;
+}
+
+/* CONTAINER */
+
+.ContainerBody {
+  background-color: #fff;
+  border: 1px solid #dfe0eb;
+  border-radius: 5px;
+  padding: 30px 30px !important;
+  margin-right: 4%;
+  width: 78%;
+  position: absolute;
+  left: 285px;
+  top: 100px;
+}
+
+.container {
+  width: 100% !important;
+}
+
+.ContainerBody h2 {
+  font-weight: bold;
+  margin: 30px 0px;
+}
+
+.Panel {
+  display: flex;
+}
+
+.PanelTitle {
+  font-size: 2rem;
+}
+
+.ActionPanel {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ItemList {
+  display: flex;
+  padding: 20px 0px;
+  margin: 0px;
+  border-bottom: 1px solid #dfe0eb;
+}
+
+.ItemList:hover {
+  background-color: #f7f8ff;
+  cursor: pointer;
+}
+
+.ItemTitle {
+  display: flex;
+  padding-top: 20px;
+  margin: 0px;
+  border-bottom: 1px solid #dfe0eb;
+}
+
+.ItemTitleUser {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  margin: 0px;
+  border-bottom: 1px solid #dfe0eb;
+}
+
+.ActionTitleUser {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ActionTitleFont {
+  font-weight: 700;
+  color: #9fa2b4;
+}
+
+.ActionTitle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.ActionInfos {
+  display: flex;
+  align-items: center;
+}
+
+.ActionIcons2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ActionInfos p {
+  margin: 0px;
+}
+
+.ActionTitle p {
+  margin: 0px;
+}
+
+.ActionIcons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Img-list {
+  width: 40px !important;
+  height: 40px !important;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.Avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.Required {
+  color: #ff5733;
+}
+
+/* BUTTONS */
+
+.buttons {
+  text-align: right;
+}
+
+.ButtonAction {
+  text-align: center;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.Action {
+  background-color: #f1b155;
+}
+.Action:hover {
+  background-color: rgb(207, 146, 60);
+}
+
+.AddUser {
+  background-color: #007bff;
+}
+.AddUser:hover {
+  background-color: #0c3ce8;
+}
+
+.Add {
+  background-color: #a2449e;
+}
+.Add:hover {
+  background-color: #6012fb;
+}
+
+.Delete {
+  background-color: #e44f55;
+}
+
+.Return {
+  background-color: #fff;
+  border: 1px solid #9fa2b4;
+  color: #9fa2b4;
+}
+
+.Return:hover {
+  background-color: #edeef3;
+}
+
+/* STATISTICS */
+
+.Statistics-Blocks {
+  display: flex;
+  height: 150px;
+  color: #fff;
+}
+
+.Statistics-Blocks-Overall {
+  display: flex;
+  border-radius: 5px;
+  margin: 5px;
+  left: -15px;
+}
+
+.Offers {
+  background: #ff5733;
+}
+
+.Users {
+  background: #f1b155;
+}
+
+.Admins {
+  background: #a2449e;
+}
+
+.Statistics-Blocks-Left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Statistics-Blocks-Number {
+  display: flex;
+  font-size: 3rem;
+}
+
+.Statistics-Blocks-Fas {
+  display: flex;
+  align-items: center;
+}
+
+.Statistics-Blocks-Fas span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
