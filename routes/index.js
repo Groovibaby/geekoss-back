@@ -5,6 +5,7 @@ const users = require('./users');
 const admins = require('./admins');
 const auth = require('./auth');
 const stats = require(('./stats'));
+const banners = require(('./banners'));
 
 const router = express.Router();
 
@@ -14,5 +15,6 @@ router.use('/users', users);
 router.use('/admins', admins);
 router.use('/auth', auth);
 router.use('/stats', stats);
+router.use('/banners', banners);
 
 module.exports = router;
