@@ -14,18 +14,19 @@ const Welcome = () => {
     lastname: '',
   });
 
-  // useEffect(() => {
-  //   axios({
-  //     method: 'post',
-  //     url: 'http://localhost:3000/api/auth',
-  //     headers: {
-  //       Authorization: `Bearer ${auth.data}`,
-  //     },
-  //   })
-  //     .then((response) => response.data)
-  //     .then((data) => setProfile(data.authData.admin[0]));
-  // }, [auth.data]);
+  useEffect(() => {
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/api/auth',
+      headers: {
+        Authorization: `Bearer ${auth.data}`,
+      },
+    })
+      .then((response) => response.data)
+      .then((data) => setProfile(data.authData.admin[0]));
+  }, [auth.data]);
 
+  console.log('Profile', Profile);
   return (
     <>
       <Header />

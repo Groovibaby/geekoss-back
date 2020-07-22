@@ -27,8 +27,14 @@ const Navbar = () => {
           </Link>
           <Link to="/admin/offers">
             <li className="brand-interface">
-              <span className="fas fa-bullhorn" />
+              <span className="fas fa-file-alt" />
               Annonces
+            </li>
+          </Link>
+          <Link to="/admin/carousels">
+            <li className="brand-interface">
+              <span className="fas fa-bullhorn" />
+              Carousel
             </li>
           </Link>
         </ul>

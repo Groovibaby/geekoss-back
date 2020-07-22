@@ -410,3 +410,9 @@ a .fa-pen:hover {
   display: flex;
   justify-content: center;
 }
+
+/* BANNER */
+
+.Banner {
+  width: 100px;
+}

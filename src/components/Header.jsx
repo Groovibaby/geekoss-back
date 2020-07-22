@@ -11,17 +11,17 @@ const Header = () => {
     lastname: ''
   });
 
-  // useEffect(() => {
-  //   axios({
-  //     method: 'post',
-  //     url: 'http://localhost:3000/api/auth',
-  //     headers: {
-  //       Authorization: `Bearer ${auth.data}`,
-  //     },
-  //   })
-  //     .then((response) => response.data)
-  //     .then((data) => setProfile(data.authData.admin[0]));
-  // }, []);
+  useEffect(() => {
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/api/auth',
+      headers: {
+        Authorization: `Bearer ${auth.data}`,
+      },
+    })
+      .then((response) => response.data)
+      .then((data) => setProfile(data.authData.admin[0]));
+  }, []);
 
   const Logout = () => {
     setAuthData(null);
