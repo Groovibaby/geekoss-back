@@ -35,6 +35,37 @@ router.post("/login", (req, res) => {
   );
 });
 
+router.post("/login/user", (req, res) => {
+  const { email, password } = req.body;
+  connection.query(
+    "SELECT * FROM user WHERE email = ?",
+    email,
+    (err, admin) => {
+      if (err) {
+        res.status(500).send("Error email");
+      } else {
+        const samePassword = bcrypt.compareSync(password, admin[0].password);
+        if (!samePassword) {
+          res.status(500).send("Error password");
+        } else {
+          jwt.sign(
+            { admin },
+            process.env.DOKKU_JWT_KEY,
+            {
+              expiresIn: "2h",
+            },
+            (err, token) => {
+              res.json({
+                token,
+              });
+            }
+          );
+        }
+      }
+    }
+  );
+});
+
 router.post("/", verifyToken, (req, res) => {
   //jwt.verify etc ...
   jwt.verify(req.token, process.env.DOKKU_JWT_KEY, (err, authData) => {
