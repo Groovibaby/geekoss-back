@@ -23,7 +23,18 @@ router.get('/:id', (req, res) => {
   })
 });
 
-// Je veux créer mon profil
+// Pouvoir consulter toutes les annonces d'un user
+router.get('/user/:id', (req, res) => {
+  const idUser = req.params.id;
+  connection.query('SELECT * FROM offer WHERE user_id = ?', idUser, (err, results) => {
+    if (err) {
+      res.sendStatus(500);
+    }
+    res.status(200).json(results);
+  })
+});
+
+// Je veux créer une annonce
 router.post('/', (req, res) => {
   const formBody = req.body;
   connection.query('INSERT INTO offer SET ?', formBody, (err, results) => {
