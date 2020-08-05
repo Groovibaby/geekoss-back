@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
     if (err) {
       res.sendStatus(500);
     }
-    connection.query('SELECT * FROM offer WHERE id = ?', results.insertId, (err2, records) => {
+    return connection.query('SELECT * FROM offer WHERE id = ?', results.insertId, (err2, records) => {
       if (err2) {
         return res.status(500).json({
           error: err2.message,
@@ -55,7 +55,7 @@ router.post('/', (req, res) => {
       return res
         .status(201)
         .set('Location', location)
-        .json(offer);
+        .json(insertedOffer);
     });
   })
 });
