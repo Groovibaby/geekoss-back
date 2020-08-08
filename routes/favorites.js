@@ -34,9 +34,10 @@ router.post('/:idUser/fav/:idOffers', (req, res) => {
 });
 
 // Supprimer un favoris
-router.delete('/:id', (req, res) => {
-  const idFav = req.params.id;
-  connection.query('DELETE FROM user_fav_offer WHERE id = ?', idFav, (err, results) => {
+router.delete('/:idUser/fav/:idOffers', (req, res) => {
+  const idUser = req.params.idUser;
+  const idOffer = req.params.idOffers;
+  connection.query('DELETE FROM user_fav_offer WHERE id_user = ? AND id_offer = ?', [idUser, idOffer], (err, results) => {
     if (err) {
       res.sendStatus(500);
     }
