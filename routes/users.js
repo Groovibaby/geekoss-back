@@ -7,6 +7,7 @@ const connection = require('../db');
 router.get('/', (req, res) => {
   connection.query('SELECT * FROM user', (err, results) => {
     if (err) {
+      console.log(err);
       res.sendStatus(500)
     }
     res.status(200).json(results);
