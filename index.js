@@ -3,7 +3,11 @@ const app = express();
 const apiRouter = require("./routes");
 const port = process.env.PORT || 5000;
 const cors = require("cors");
-app.use(cors());
+
+// Autorise les requêtes CORS venant de https://www.geekoss.fr
+app.use(cors({
+  origin: 'https://www.geekoss.fr'
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
